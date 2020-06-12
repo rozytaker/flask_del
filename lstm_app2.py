@@ -108,7 +108,9 @@ class LargeNew(Resource):
         pred=pd.DataFrame(df3)
         pred['Time']='2020-11-12'
         pred.columns=['pred','timestamp']
-        pred.head(3)
+        print(pred.head(3))
+        print('out',json.dumps(pred.to_dict(orient='records')))
+        # pred.head(3)
         response = make_response(json.dumps(pred.to_dict(orient='records')))
         response.headers['content-type'] = 'application/octet-stream'
         return response
