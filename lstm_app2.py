@@ -222,4 +222,4 @@ class LargeNew(Resource):
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=6003, debug=True)
+    app.run(port=6003, debug=True)
