@@ -15,8 +15,8 @@ app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-dummy_dm = api.model('dummy_dm', {
-        'tenant_id': fields.String(description='Tenant Id', required=True, example='jaipur.com')
+name = api.model('name', {
+        'name_id': fields.String(description='Enter Name', required=True, example='ABCD')
     })
 
 model_new = keras.models.load_model('my_model')
@@ -27,7 +27,7 @@ model_new = keras.models.load_model('my_model')
 
 @api.route('/prediction')
 class LargeNew(Resource):
-    @api.expect(dummy_dm)
+    @api.expect(name)
     # def post(self):
     #     data = request.json
     #     tenant_id = data['tenant_id']
