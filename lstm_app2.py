@@ -112,7 +112,7 @@ class LargeNew(Resource):
         print('out',json.dumps(pred.to_dict(orient='records')))
         # pred.head(3)
         response = make_response(json.dumps(pred.to_dict(orient='records')))
-        response.headers['content-type'] = 'application/octet-stream'
+        # response.headers['content-type'] = 'application/octet-stream'
         return response
         
 
