@@ -11,5 +11,5 @@ matplotlib>=1.4.3
 pandas>=0.19
 flask_restplus
 flask_cors
-tensorflow==2.1.0
+tensorflow==2.5.1
 pandas_datareader
